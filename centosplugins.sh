@@ -4,9 +4,9 @@ echo -e "\033[31m###################### Installing CentOS Plugins  #############
 echo "######################### Vivoxy İnternet Hizmetleri #########################"
 echo -e "\033[35m#-----------------------------------------------------------------#"
 echo "# (0) Bash Scripti Güncelle                                    #"
-echo "# (1) Sunucuya Reboot At                           	     #"
-echo "# (2) SQL Servisini Yeniden Başlat                                 #"
-echo "# (3) Apache (HTTP) Servisini Yeniden Başlat                     #"
+echo "# (1) Centos Installing "SSH2" Extension                           	     #"
+echo "# (2) Centos Installing "MONO" Extension                              #"
+echo "# (3) Centos Installing "Mod Pagespeed" Extension                  #"
 echo "# (4) Litespeed Servisini Yeniden Başlat                        	   #"
 echo "# (5) DNS Sunucusunu Yeniden Başlat                             	   #"
 echo "# (6) Posta Sunucusunu Yeniden Başlat                              	   #"
@@ -35,32 +35,48 @@ clear
 echo "Bash script güncelleniyor, lütfen bekleyiniz..."
 sleep 3
 cd /root
-rm -rf yardimci.sh
-rm -rf yardimci.log
-wget https://raw.github.com/vivoxy/yardimci/master/yardimci.sh
-touch yardimci.log
-chmod +x /root/yardimci.sh
-sh yardimci.sh
+rm -rf centosplugins.sh
+rm -rf centosplugins.log
+wget https://raw.github.com/vivoxy/centosplugins/master/centosplugins.sh
+touch centosplugins.log
+chmod +x /root/centosplugins.sh
+sh centosplugins.sh
 ;;
 1)
 clear
-echo "Sunucuya Reboot atılıyor..."
+echo "SSH 2 Kuruluyor..."
 sleep 3
-reboot
+yum -y install gcc php-devel php-pear make libssh2 libssh2-devel
+pecl install -f ssh2
+echo extension=ssh2.so >> /usr/local/lib/php.ini
+service httpd restart && service nginx restart && service lsws restart
+echo "SSH 2 Eklentisi Kurulmuştur..."
 ;;
 2)
 clear
-echo "SQL Servisi Yeniden Başlatılıyor, lütfen bekleyiniz..."
+echo "Mono Kuruluyor..."
 sleep 3
-/etc/rc.d/init.d/mysql restart
-echo "SQL Servisi Yeniden Başlatıldı."
+yum install yum-utils
+rpm --import "http://keyserver.ubuntu.com/pks/lookup?op=get&search=0x3FA7E0328081BFF6A14DA29AA6A19B38D3D831EF"
+yum-config-manager --add-repo http://download.mono-project.com/repo/centos6/
+yum install mono-devel
+echo "MONO Eklentisi Kurulmuştur..."
 ;;
 3)
 clear
-echo "Apache (HTTP) Servisi Yeniden Başlatılıyor, lütfen bekleyiniz..."
+echo "Mod Pagespeed Kuruluyor..."
 sleep 3
-/etc/init.d/apache2 restart
-echo "Apache (HTTP) Servisi Yeniden Başlatıldı."
+echo extension=[mod-pagespeed] >> /etc/yum.repos.d/mod-pagespeed.repo
+echo extension=name=mod-pagespeed >> /etc/yum.repos.d/mod-pagespeed.repo
+echo extension=baseurl=http://dl.google.com/linux/mod-pagespeed/rpm/stable/x86_64 >> /etc/yum.repos.d/mod-pagespeed.repo
+echo extension=enabled=1 >> /etc/yum.repos.d/mod-pagespeed.repo
+echo extension=gpgcheck=0 >> /etc/yum.repos.d/mod-pagespeed.repo
+yum repolist
+yum install mod-pagespeed -y
+echo extension=ModPagespeed on >> /etc/httpd/conf.d/pagespeed.conf
+echo "Reboot Atılıyor..."
+sleep
+reboot
 ;;
 4)
 clear
