@@ -9,7 +9,7 @@ Hello friends<br>
 In this Bash Script for Linux (CentOS) operating system, I share the script I wrote for easy installation of frequently used modules. The list will be updated continuously. I will add attachments as I come to mind. You can forward your requests to me, which you have to add to this list. The properties of our script are below.
 <br><br>
 <b>Script Properties;</b><br><br>
-<li>(0) Bash Scripti Güncelle</li><br>
+<li>(0) Update Bash Script</li><br>
 <li>(1) Linux ( Centos ) Installing SSH2 Extension</li><br>
 <li>(2) Linux ( Centos ) Installing MONO Extension</li><br>
 <li>(3) Linux ( Centos ) Installing Mod Pagespeed Extension</li><br>
