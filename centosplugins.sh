@@ -1,6 +1,6 @@
 ﻿#!/bin/bash
 clear
-echo -e "\033[31m###################### Web Server Yardımcı Komutları #####################"
+echo -e "\033[31m###################### Installing CentOS Plugins  #####################"
 echo "######################### Vivoxy İnternet Hizmetleri #########################"
 echo -e "\033[35m#-----------------------------------------------------------------#"
 echo "# (0) Bash Scripti Güncelle                                    #"
