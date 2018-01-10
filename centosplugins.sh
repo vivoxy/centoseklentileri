@@ -1,4 +1,4 @@
-﻿#!/bin/bash
+#!/bin/bash
 clear
 echo -e "\033[31m###################### Installing CentOS Plugins  #####################"
 echo "######################### Vivoxy İnternet Hizmetleri #########################"
@@ -14,18 +14,6 @@ echo "# (7) "Monitorix" Setup on Linux ( Centos )                               
 echo "# (8) "Apache Httpd" Installation on Linux ( Centos ) Server                              		   #"
 echo "# (9) Installing "MySQL / PHP / PhpMyAdmin" on Linux ( Centos ) Server                             	   #"
 echo "# (10) Linux ( Centos ) Performance Test Setup                            	   #"
-echo -e "\033[33m#-----------------------------------------------------------------#"
-echo "# (10) İp Adresini Değiştir            					   #"
-echo "# (11) Sunucu Hostname Değiştir             					   #"
-echo "# (12) İptables Servisini Aç            						   #"
-echo "# (13) İptables Servisini Kapat            						   #"
-echo "# (14) İptables Servisini Yeniden Başlat            			   #"
-echo "# (15) Sunucuda Takılı Kalan İp Adreslerini Güncelle                       #"
-echo "#-----------------------------------------------------------------		   #"
-echo -e "\033[34m# (20) Disk Bilgilerini Görüntüle                        #"
-echo "# (21) CPU Bilgilerini Görüntüle                                   #"
-echo "# (22) Ram Bilgilerini Görüntüle                                    #"
-echo "# (23) Sunucu Kaynak Tüketimini Görüntüle     			   #"
 echo "##############################################################################"
 echo -e "\033[32m"
 echo Seçiminizi Giriniz :
