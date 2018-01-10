@@ -1,14 +1,14 @@
 # centoseklentileri
-<br>
+<br><br><br>
 Utopian Link : https://utopian.io/@northeaster
-<br>
+<br><br><br>
 English translation
-<br>
-Hello friends
-<br>
+<br><br>
+Hello friends<br>
+<br><br>
 In this Bash Script for Linux (CentOS) operating system, I share the script I wrote for easy installation of frequently used modules. The list will be updated continuously. I will add attachments as I come to mind. You can forward your requests to me, which you have to add to this list. The properties of our script are below.
-<br>
-<b>Script Properties;<b><br><br>
+<br><br>
+<b>Script Properties;</b><br><br>
 <li>(0) Bash Scripti Güncelle</li><br>
 <li>(1) Linux ( Centos ) Installing SSH2 Extension</li><br>
 <li>(2) Linux ( Centos ) Installing MONO Extension</li><br>
