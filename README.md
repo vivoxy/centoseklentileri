@@ -10,22 +10,22 @@ In this Bash Script for Linux (CentOS) operating system, I share the script I wr
 <br><br>
 <b>Script Properties;</b><br><br>
 <li>(0) Update Bash Script</li><br>
-<li>(1) Linux ( Centos ) Installing SSH2 Extension</li><br>
-<li>(2) Linux ( Centos ) Installing MONO Extension</li><br>
-<li>(3) Linux ( Centos ) Installing Mod Pagespeed Extension</li><br>
-<li>(4) Linux ( Centos ) Installing Dstat Extension</li><br>
-<li>(5) Linux ( Centos ) Installing MongoDB Extension</li><br>
-<li>(6) ISPConfig Setup on Linux ( Centos )</li><br>
-<li>(7) Monitorix Setup on Linux ( Centos )</li><br>
-<li>(8) Apache Httpd Installation on Linux ( Centos ) Server</li><br>
-<li>(9) Installing MySQL / PHP / PhpMyAdmin on Linux ( Centos ) Server</li><br>
-<li>(10) Linux ( Centos ) Performance Test Setup</li><br>
-<li>(11) Linux ( Centos ) HDD Information</li><br>
-<li>(12) Linux ( Centos ) CPU Information</li><br>
-<li>(13) Linux ( Centos ) RAM Information</li><br>
-<li>(14) Linux ( Centos ) Resource Consumption Information</li><br>
+<li>(1) Linux ( Centos ) Installing SSH2 Extension</li>
+<li>(2) Linux ( Centos ) Installing MONO Extension</li>
+<li>(3) Linux ( Centos ) Installing Mod Pagespeed Extension</li>
+<li>(4) Linux ( Centos ) Installing Dstat Extension</li>
+<li>(5) Linux ( Centos ) Installing MongoDB Extension</li>
+<li>(6) ISPConfig Setup on Linux ( Centos )</li>
+<li>(7) Monitorix Setup on Linux ( Centos )</li>
+<li>(8) Apache Httpd Installation on Linux ( Centos ) Server</li>
+<li>(9) Installing MySQL / PHP / PhpMyAdmin on Linux ( Centos ) Server</li>
+<li>(10) Linux ( Centos ) Performance Test Setup</li>
+<li>(11) Linux ( Centos ) HDD Information</li>
+<li>(12) Linux ( Centos ) CPU Information</li>
+<li>(13) Linux ( Centos ) RAM Information</li>
+<li>(14) Linux ( Centos ) Resource Consumption Information</li>
 
-<b>Script Picture;<b><br><br>
+<b>Script Picture;</b><br><br>
 <img border="0" src="https://image.prntscr.com/image/VWUCCmKKRnqnZHOMfUvjOw.png"></a><br>
 
 <br>
