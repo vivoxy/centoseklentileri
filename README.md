@@ -25,6 +25,7 @@ In this Bash Script for Linux (CentOS) operating system, I share the script I wr
 <li>(13) Linux ( Centos ) RAM Information</li>
 <li>(14) Linux ( Centos ) Resource Consumption Information</li>
 
+<br><br>
 <b>Script Picture;</b><br><br>
 <img border="0" src="https://image.prntscr.com/image/VWUCCmKKRnqnZHOMfUvjOw.png"></a><br>
 
@@ -35,7 +36,7 @@ In this Bash Script for Linux (CentOS) operating system, I share the script I wr
 Türkçe Çeviri
 Merhaba Arkadaşlar 
 Bu Bash Komut Dosyamızda Linux ( Centos ) işletim sistemi için , sıkça kullanılan modüllerin kolaylıkla kurulabilmesi için yazdığım komut dosyasını sizler için paylaşıyorum. Liste sürekli güncellenecek. Aklıma geldikçe eklentiler ekleyeceğim. Sizlerde bu listeye eklenmesi gereken isteklerinizi , bana iletebilirsiniz. Komut dosyamızın özellikleri aşağıdadır.
-
+<br>
 <b>Script Özellikleri : </b><br><br>
 
 <li>(0) Bash Komut Dosyasını Güncelleyin</li>
@@ -68,7 +69,7 @@ Bu Bash Komut Dosyamızda Linux ( Centos ) işletim sistemi için , sıkça kull
 
 <li>(14) Linux (Centos) Kaynak Tüketimi Bilgileri</li>
 
-
+<br><br>
 <b>Script Resmi</b><br><br>
 
 <img border="0" src="https://image.prntscr.com/image/VWUCCmKKRnqnZHOMfUvjOw.png"></a>
