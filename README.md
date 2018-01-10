@@ -24,6 +24,19 @@ In this Bash Script for Linux (CentOS) operating system, I share the script I wr
 <li>(12) Linux ( Centos ) CPU Information</li>
 <li>(13) Linux ( Centos ) RAM Information</li>
 <li>(14) Linux ( Centos ) Resource Consumption Information</li>
+<br>
+<br>
+<br>
+<b>How to Build and Work;</b><br><br>
+
+
+You should be able to enter the following commands into the CentOS SSH partition.<br>
+
+
+cd /root<br>
+wget https://raw.github.com/vivoxy/yardimci/master/yardimci.sh<br>
+sh yardimci.sh<br>
+
 
 <br><br>
 <b>Script Picture;</b><br><br>
@@ -68,6 +81,21 @@ Bu Bash Komut Dosyamızda Linux ( Centos ) işletim sistemi için , sıkça kull
 <li>(13) Linux (Centos) RAM Bilgisi</li>
 
 <li>(14) Linux (Centos) Kaynak Tüketimi Bilgileri</li>
+
+
+<br>
+<br>
+<br>
+<b>Nasıl Kurulur & Çalışır;</b><br><br>
+
+
+Aşağıdaki komutları CentOS SSH bölümüne girmeniz yeterli gelecektir..<br>
+
+
+cd /root<br>
+wget https://raw.github.com/vivoxy/yardimci/master/yardimci.sh<br>
+sh yardimci.sh<br>
+
 
 <br><br>
 <b>Script Resmi</b><br><br>
