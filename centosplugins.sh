@@ -9,9 +9,9 @@ echo "# (2) Centos Installing "MONO" Extension                              #"
 echo "# (3) Centos Installing "Mod Pagespeed" Extension                  #"
 echo "# (4) Centos Installing "Dstat" Extension                         	   #"
 echo "# (5) Centos Installing "MongoDB" Extension                            	   #"
-echo "# (6) Posta Sunucusunu Yeniden Başlat                              	   #"
-echo "# (7) SSH  Sunucusunu Yeniden Başlat                               	   #"
-echo "# (8) İmap  Sunucusunu Yeniden Başlat                              	   #"
+echo "# (6) "ISPConfig" Setup on CentOS                              	   #"
+echo "# (7) "Monitorix" Setup on CentOS                               	   #"
+echo "# (8) Installing "MySQL / PHP / PhpMyAdmin" on CentOS Server                             	   #"
 echo "# (9) Network'u Yeniden Başlat                              		   #"
 echo -e "\033[33m#-----------------------------------------------------------------#"
 echo "# (10) İp Adresini Değiştir            					   #"
@@ -133,17 +133,57 @@ sleep 1
 echo "MongoDB Eklentisi Kurulmuştur... "
 6)
 clear
-echo "Posta Sunucusu Yeniden Başlatılıyor, lütfen bekleyiniz..."
+echo "ISPCONFİG kurulumu başlıyor.."
 sleep 3
-/etc/rc.d/init.d/exim restart
-echo "Posta Sunucusu Yeniden Başlatıldı."
+yum update -y
+sleep 1
+echo extension=SELINUX=disabled >> /etc/sysconfig/selinux
+sleep 1
+yum install php mod_fcgid
+sleep 1
+yum -y install postfix dovecot mailman system-switch-mail
+sleep 1
+yum -y install mysql mysql-server php-mysql
+sleep 1
+yum -y install pure-ftpd
+sleep 1
+wget --no-check-certificate https://github.com/servisys/ispconfig_setup/archive/master.zip
+sleep 1
+unzip master.zip
+sleep 1
+cd ispconfig_setup-master/
+sleep 1
+./install.sh
+sleep 1
+echo "ISPConfig Kuruldu. Reboot Atılıyor.."
+sleep 1
+echo "Tarayıcınızdan https://ipadresi:8080/index.php adresini ziyaret edip sunucu root bilgileriniz ile panele giriş yapabilirsiniz.."
+sleep 5
+reboot
 ;;
 7)
 clear
-echo "SSH  Sunucusu Yeniden Başlatılıyor, lütfen bekleyiniz..."
+echo "monitorix Kuruluyor..."
 sleep 3
-/etc/rc.d/init.d/httpd restart
-echo "SSH  Sunucusu Yeniden Başlatıldı."
+yum update -y
+sleep 1
+http://download.fedoraproject.org/pub/epel/7/x86_64/Packages/e/epel-release-7-11.noarch.rpm
+sleep 1
+rpm -ihv epel-release-7-11.noarch.rpm
+sleep 1
+yum install rrdtool rrdtool-perl perl-libwww-perl perl-MailTools perl-MIME-Lite perl-CGI perl-DBI perl-XML-Simple perl-Config-General perl-HTTP-Server-Simple wget -y
+sleep 1
+yum install monitorix -y
+sleep 1
+systemctl enable monitorix.service
+sleep 1
+systemctl disable firewalld
+sleep 1
+systemctl stop firewalld
+sleep 1
+/bin/systemctl start monitorix.service
+sleep 1
+echo "Tarayıcınız ile http://ipadresi:8080/monitorix adresini ziyaret ederek monitör panelinize ulaşabilirsiniz.."
 ;;
 8)
 clear
@@ -154,10 +194,38 @@ echo "İmap Sunucusu Yeniden Başlatıldı."
 ;;
 9)
 clear
-echo "Network Yeniden Başlatılıyor, lütfen bekleyiniz..."
+echo "MySQL/PHP/PhpMyAdmin Kurulumu Başılıyor..."
 sleep 3
-service network restart
-echo "Network Yeniden Başlatıldı."
+yum install mysql mysql-server -y
+sleep 1
+service mysqld start
+sleep 1
+chkconfig mysqld on
+sleep 1
+mysql_secure_installation
+sleep 1
+service mysqld restart
+sleep 1
+iptables -I INPUT -p tcp --dport 3306 -j ACCEPT
+sleep 1
+iptables -I INPUT -p tcp --sport 3306 -j ACCEPT
+sleep 1
+service iptables save
+sleep 1
+service iptables restart
+sleep 1
+yum install -y php
+sleep 1
+service httpd restart
+sleep 1
+yum install -y php-gd php-imap php-ldap php-mbstring php-mysql php-odbc php-pear php-xml php-xmlrpc php-pecl-apc
+sleep 1
+http://pkgs.repoforge.org/rpmforge-release/rpmforge-release-0.5.2-2.el6.rf.x86_64.rpm
+sleep 1
+install -y
+sleep 1
+echo "Kurulum tamamlandı.T arayıcımıza girip http://ipadresi/phpMyAdmin adresini ziyaret ederek açılan sayfadan ilk başta belirlediğiniz mysql bilgileri ile giriş yapabilirsiniz."
+
 ;;
 10)
 clear
