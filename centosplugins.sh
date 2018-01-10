@@ -4,15 +4,16 @@ echo -e "\033[31m###################### Installing CentOS Plugins  #############
 echo "######################### Vivoxy İnternet Hizmetleri #########################"
 echo -e "\033[35m#-----------------------------------------------------------------#"
 echo "# (0) Bash Scripti Güncelle                                    #"
-echo "# (1) Centos Installing "SSH2" Extension                           	     #"
-echo "# (2) Centos Installing "MONO" Extension                              #"
-echo "# (3) Centos Installing "Mod Pagespeed" Extension                  #"
-echo "# (4) Centos Installing "Dstat" Extension                         	   #"
-echo "# (5) Centos Installing "MongoDB" Extension                            	   #"
-echo "# (6) "ISPConfig" Setup on CentOS                              	   #"
-echo "# (7) "Monitorix" Setup on CentOS                               	   #"
-echo "# (8) Installing "MySQL / PHP / PhpMyAdmin" on CentOS Server                             	   #"
-echo "# (9) Network'u Yeniden Başlat                              		   #"
+echo "# (1) Linux ( Centos ) Installing "SSH2" Extension                           	     #"
+echo "# (2) Linux ( Centos ) Installing "MONO" Extension                              #"
+echo "# (3) Linux ( Centos ) Installing "Mod Pagespeed" Extension                  #"
+echo "# (4) Linux ( Centos ) Installing "Dstat" Extension                         	   #"
+echo "# (5) Linux ( Centos ) Installing "MongoDB" Extension                            	   #"
+echo "# (6) "ISPConfig" Setup on Linux ( Centos )                              	   #"
+echo "# (7) "Monitorix" Setup on Linux ( Centos )                               	   #"
+echo "# (8) "Apache Httpd" Installation on Linux ( Centos ) Server                              		   #"
+echo "# (9) Installing "MySQL / PHP / PhpMyAdmin" on Linux ( Centos ) Server                             	   #"
+echo "# (10) Linux ( Centos ) Performance Test Setup                            	   #"
 echo -e "\033[33m#-----------------------------------------------------------------#"
 echo "# (10) İp Adresini Değiştir            					   #"
 echo "# (11) Sunucu Hostname Değiştir             					   #"
@@ -102,6 +103,7 @@ yum install update -y
 sleep 1
 yum -y install dstat
 sleep 1
+clear
 echo "Dstat Eklentisi Kurulmuştur... Eklentisi açmak için ssh ekranında --dstat-- yazınız"
 ;;
 5)
@@ -157,6 +159,7 @@ sleep 1
 sleep 1
 echo "ISPConfig Kuruldu. Reboot Atılıyor.."
 sleep 1
+clear
 echo "Tarayıcınızdan https://ipadresi:8080/index.php adresini ziyaret edip sunucu root bilgileriniz ile panele giriş yapabilirsiniz.."
 sleep 5
 reboot
@@ -183,14 +186,22 @@ systemctl stop firewalld
 sleep 1
 /bin/systemctl start monitorix.service
 sleep 1
+clear
 echo "Tarayıcınız ile http://ipadresi:8080/monitorix adresini ziyaret ederek monitör panelinize ulaşabilirsiniz.."
 ;;
 8)
 clear
-echo "İmap Sunucusu Yeniden Başlatılıyor, lütfen bekleyiniz..."
+echo "Kurulum Başlatılıyor..."
 sleep 3
-service dovecot restart
-echo "İmap Sunucusu Yeniden Başlatıldı."
+yum -y update
+sleep 1
+yum -y install httpd
+sleep 1
+service httpd start
+sleep 1
+service iptables stop
+sleep 1
+echo "Kurulum tamamlandı. Tarayıcımız ile http://ipadresi/ şeklinde giriş yaparak Apache default safanızı görüntüleyebilirsiniz."
 ;;
 9)
 clear
@@ -224,14 +235,31 @@ http://pkgs.repoforge.org/rpmforge-release/rpmforge-release-0.5.2-2.el6.rf.x86_6
 sleep 1
 install -y
 sleep 1
+clear
 echo "Kurulum tamamlandı.T arayıcımıza girip http://ipadresi/phpMyAdmin adresini ziyaret ederek açılan sayfadan ilk başta belirlediğiniz mysql bilgileri ile giriş yapabilirsiniz."
-
 ;;
 10)
 clear
-echo "İp adresinizi değiştirmek için panel açılıyor, lütfen bekleyiniz..."
+echo "Performans Testi Kuruluyor..."
 sleep 3
-nano /etc/sysconfig/network-scripts/ifcfg-eth0
+yum install wget -y 
+sleep 1
+wget https://storage.googleapis.com/google-code-archive-downloads/v2/code.google.com/byte-unixbench/UnixBench5.1.3.tgz
+sleep 1
+yum install libXext-devel -y
+sleep 1
+yum install gcc-c++ -y
+sleep 1
+yum install mesa-libGL-devel libXext-devel -y
+sleep 1
+cd /root
+sleep 1
+tar zxvf UnixBench5.1.3.tgz
+sleep 1
+clear
+echo "Performans Testi Kuruldu. Lütfen Aşağıdaki işlemleri ssh bölümünden yazınız...."
+echo "cd UnixBench   yazıp enterleyin"
+echo "./Run    yazıp enterleyin."
 ;;
 11)
 clear
