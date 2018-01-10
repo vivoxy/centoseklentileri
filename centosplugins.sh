@@ -126,6 +126,7 @@ sleep 1
 service mongod status
 sleep 1
 echo "MongoDB Eklentisi Kurulmuştur... "
+;;
 6)
 clear
 echo "ISPCONFİG kurulumu başlıyor.."
