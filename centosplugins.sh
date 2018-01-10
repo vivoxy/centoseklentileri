@@ -4,16 +4,21 @@ echo -e "\033[31m###################### Installing CentOS Plugins  #############
 echo "######################### Vivoxy İnternet Hizmetleri #########################"
 echo -e "\033[35m#-----------------------------------------------------------------#"
 echo "# (0) Bash Scripti Güncelle                                    #"
-echo "# (1) Linux ( Centos ) Installing "SSH2" Extension                           	     #"
-echo "# (2) Linux ( Centos ) Installing "MONO" Extension                              #"
-echo "# (3) Linux ( Centos ) Installing "Mod Pagespeed" Extension                  #"
-echo "# (4) Linux ( Centos ) Installing "Dstat" Extension                         	   #"
-echo "# (5) Linux ( Centos ) Installing "MongoDB" Extension                            	   #"
-echo "# (6) "ISPConfig" Setup on Linux ( Centos )                              	   #"
-echo "# (7) "Monitorix" Setup on Linux ( Centos )                               	   #"
-echo "# (8) "Apache Httpd" Installation on Linux ( Centos ) Server                              		   #"
-echo "# (9) Installing "MySQL / PHP / PhpMyAdmin" on Linux ( Centos ) Server                             	   #"
+echo "# (1) Linux ( Centos ) Installing SSH2 Extension                           	     #"
+echo "# (2) Linux ( Centos ) Installing MONO Extension                              #"
+echo "# (3) Linux ( Centos ) Installing Mod Pagespeed Extension                  #"
+echo "# (4) Linux ( Centos ) Installing Dstat Extension                         	   #"
+echo "# (5) Linux ( Centos ) Installing MongoDB Extension                            	   #"
+echo "# (6) ISPConfig Setup on Linux ( Centos )                              	   #"
+echo "# (7) Monitorix Setup on Linux ( Centos )                               	   #"
+echo "# (8) Apache Httpd Installation on Linux ( Centos ) Server                              		   #"
+echo "# (9) Installing MySQL / PHP / PhpMyAdmin on Linux ( Centos ) Server                             	   #"
 echo "# (10) Linux ( Centos ) Performance Test Setup                            	   #"
+echo "# (11) Linux ( Centos ) HDD Information                           	   #"
+echo "# (12) Linux ( Centos ) CPU Information                            	   #"
+echo "# (13) Linux ( Centos ) RAM Information                            	   #"
+echo "# (14) Linux ( Centos ) Resource Consumption Information                            	   #"
+
 echo "##############################################################################"
 echo -e "\033[32m"
 echo Seçiminizi Giriniz :
@@ -251,57 +256,23 @@ echo "./Run    yazıp enterleyin."
 ;;
 11)
 clear
-echo "Sunucu Hostname değiştirmek için panel açılıyor, lütfen bekleyiniz..."
-sleep 3
-nano /etc/sysconfig/network
-;;
-12)
-clear
-echo "İptables Açılıyor, lütfen bekleyiniz..."
-sleep 3
-service iptables start
-echo "İptables Servisi Açıldı."
-;;
-13)
-clear
-echo "İptables Kapatılıyor, lütfen bekleyiniz..."
-sleep 3
-service iptables stop
-echo "İptables Servisi Kapatıldı."
-;;
-14)
-clear
-echo "İptables Yeniden Başlatılıyor, lütfen bekleyiniz..."
-sleep 3
-service iptables restart
-echo "İptables Servisi Yeniden Başlatıldı."
-;;
-15)
-clear
-echo "Sunucudaki İp Adresleri Sorunu Çözülüyor, lütfen bekleyiniz..."
-sleep 3
-service ipaliases restart
-echo "Sorun Çözüldü."
-;;
-20)
-clear
 echo "Disk bilgileri alınıyor, lütfen bekleyiniz..."
 sleep 3
 df -h
 ;;
-21)
+12)
 clear
 echo "CPU bilgileri alınıyor, lütfen bekleyiniz..."
 sleep 3
 cat /proc/cpuinfo
 ;;
-22)
+13)
 clear
 echo "Ram bilgileri alınıyor, lutfen bekleyiniz..."
 sleep 3
 cat /proc/meminfo
 ;;
-23)
+14)
 clear
 echo "Anlık kaynak tüketimi alınıyor, lütfen bekleyiniz..."
 sleep 3
