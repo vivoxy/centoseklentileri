@@ -36,5 +36,39 @@ Türkçe Çeviri
 Merhaba Arkadaşlar 
 Bu Bash Komut Dosyamızda Linux ( Centos ) işletim sistemi için , sıkça kullanılan modüllerin kolaylıkla kurulabilmesi için yazdığım komut dosyasını sizler için paylaşıyorum. Liste sürekli güncellenecek. Aklıma geldikçe eklentiler ekleyeceğim. Sizlerde bu listeye eklenmesi gereken isteklerinizi , bana iletebilirsiniz. Komut dosyamızın özellikleri aşağıdadır.
 
+<b>Script Özellikleri : </b><br><br>
+
+<li>(0) Bash Komut Dosyasını Güncelleyin</li>
+
+<li>(1) Linux (Centos) SSH2 Uzantısını Yükleme</li>
+
+<li>(2) Linux (Centos) MONO Eklentisinin Kurulması</li>
+
+<li>(3) Linux (Centos) Mod Pagespeed Uzantısını Yükleme</li>
+
+<li>(4) Linux (Centos) Dstat Uzantısını Yükleme</li>
+
+<li>(5) Linux (Centos) MongoDB Uzantısını Yükleme</li>
+
+<li>(6) Linux'ta ISPConfig Kurulumu (Centos)</li>
+
+<li>(7) Linux'ta Monitorix Kurulumu (Centos)</li>
+
+<li>(8) Linux (Centos) Sunucusunda Apache Httpd Kurulumu</li>
+
+<li>(9) MySQL / PHP / PhpMyAdmin'i Linux'a (Centos) Sunucuya Yükleme</li>
+
+<li>(10) Linux (Centos) Performans Testi Kurulumu</li>
+
+<li>(11) Linux (Centos) HDD Bilgisi</li>
+
+<li>(12) Linux (Centos) CPU Bilgisi</li>
+
+<li>(13) Linux (Centos) RAM Bilgisi</li>
+
+<li>(14) Linux (Centos) Kaynak Tüketimi Bilgileri</li>
+
+
+<b>Script Resmi</b><br><br>
 
 <img border="0" src="https://image.prntscr.com/image/VWUCCmKKRnqnZHOMfUvjOw.png"></a>
